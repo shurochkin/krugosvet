@@ -1,0 +1,131 @@
+- var page = 'club'
+doctype
+html#club
+	head
+		title Детский клуб | Детский сад "Кругосвет" в Рыбацком
+		include ./templates/head.jade
+		script.
+			var clubpage = true;
+
+
+
+	body#home
+		include ./templates/contact.jade
+		
+		#page
+			include ./templates/header.jade
+
+			#content
+				.wrap
+					section#top
+						div.content
+							h2.sweet 
+								i Детский
+								i клуб
+								i
+
+					section#schedule-table
+						
+						.table
+							.caption Расписание занятий
+							.thead
+								.tr
+									.th
+									.th Пн
+									.th Вт
+									.th Ср
+									.th Чт
+									.th Пт
+									.th Сб
+							
+							.tbody
+
+							.tfoot
+								.tr
+									.td
+									.td
+										| <i class="st"></i> Ступени развития
+									.td
+										| <i class="cr"></i> Творчество
+									.td
+										| <i class="mu"></i> Музыка
+									.td.w
+										h6 Логопед
+										span пн,ср,чт,пт<br>вт
+										span с 15:00 до 18:00<br>с 9:00 до 11:00
+									.td.w
+										h6 Консультации психолога и логопеда
+										span.
+											по предварительной записи<br>
+											Ежедневно с 17:00 до 20:00
+								.tr
+									.td
+									.td
+										| <i class="ln"></i> Языковой клуб
+									.td
+										| <i class="sp"></i> Спорт и движение
+									.td
+										| <i class="ph"></i> Физика и химия
+
+
+
+
+						
+			.hide
+				#details
+					.desc
+						span.cat
+
+						h3 Lesson header
+						p.age (от <span class="start">X</span> до <span class="end">Y</span> лет)
+
+						ul.included
+							li item
+						.description
+							p Иметь с собой:
+							ul.have
+								li item
+							p.schedule
+							p.time 
+							p.people 
+
+						footer
+							.price
+								span 2 000
+								|  руб/мес
+							.submit
+								button.club-order Записаться
+					form.form.hide
+						h3 Для записи на занятие &laquo;<span class="tarif"></span>&raquo; заполните поля ниже
+
+						fieldset
+							legend Родитель:
+							label Имя:
+								input(type='text' name='parent_firstname' required)
+									
+							label Фамилия:
+								input(type='text' name='parent_lastname')
+
+						fieldset
+							legend Ребенок:
+							label Имя:
+								input(type='text' name='kinder_firstname' required)
+									
+							label Фамилия:
+								input(type='text' name='kinder_lastname')
+
+							label Возраст:
+								input(type='number' name='age' min='0' max='6' step='.1' required) 
+						fieldset
+							legend Контактный телефон
+							label
+								input(type='text' name='phone' required)
+
+						input(type='hidden' name='tarif' value='')						
+						input(type='submit' value='Отправить')
+
+
+
+			include ./templates/footer.jade
+
+	include ./templates/scripts.jade

@@ -1,0 +1,44 @@
+#values
+	position: relative
+	top: -45px 
+	.b1
+		background: $yellow-1 
+	.b2
+		background: $yellow-2
+	.b3
+		background: $yellow-3
+	.row
+		@include container
+		&>div
+			border-right: 2px solid $blue
+			height: 207px
+			width: 337px
+			position: relative
+			overflow: hidden
+			display: inline-block
+			&:last-child
+				border-right: none
+			&.b1 h3
+				background: $yellow-1 url(../svg/cennosty-01.svg) no-repeat 80% 80%
+			&.b2 h3
+				background: $yellow-2 url(../svg/cennosty-02.svg) no-repeat 80% 80%
+			&.b3 h3
+				background: $yellow-3 url(../svg/cennosty-03.svg) no-repeat 80% 80%
+			h3,p
+				padding: 24px
+				margin: 0
+				@include transition(all .3s ease)
+			h3
+				@include absolute-pos(0,0,0,0)
+				@include vr-baseline(23px, 25px) 
+			p
+				@include absolute-pos(100%,0,0,0)
+				@include vr-baseline(14.5px, 20px) 
+			&:hover
+				h3
+					@include absolute-pos(-100%,0,100%,0)
+				p
+					@include absolute-pos(0,0,0,0)
+
+				
+				

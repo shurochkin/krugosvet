@@ -1,0 +1,44 @@
+#panel
+	height: 455px 
+	background: $grey-darkness url(../svg/contacts/clouds.svg) no-repeat 25% 120%
+	@include absolute-pos(-455px,0,null,0)
+	@include transition(top .5s ease)
+	z-index: 10 
+	.inner 
+		background: transparent url(../svg/contacts/planety.svg) no-repeat 52% 22%
+	.w50
+		display: block
+		float: left
+		width: 50%
+	.wrap
+		
+		padding: 75px 0
+		.info 
+			background: transparent url(../svg/contacts/cosmonavty.svg) no-repeat 90% 50%
+			h2
+				font-family: $font-black
+				@include vr-baseline(37.5px, 37.5px)
+				margin: 0 0 1em 0
+			p
+				@include vr-baseline(18px, 22px)
+				margin: 0 0 1em 0
+			ul
+				margin-top: 3em 
+				list-style: none 
+				padding: 0
+				li
+					display: inline-block
+					text-align: center
+					padding: 0 20px 0 0
+					a
+						color: $grey-dark
+						&:last-child
+							padding-right: 0
+						i
+							font-size: 22px 
+
+
+#page
+	@include absolute-pos(0,0,null,0)
+	@include transition(top .5s ease)
+	

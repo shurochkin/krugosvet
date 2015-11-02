@@ -1,0 +1,94 @@
+#header
+	background: $white
+	height: 173px
+	.wrap 
+		position: relative
+		top: 0
+		height: 110px 
+		background: $white  
+		z-index: 5 
+		#logo
+			position: absolute 
+			top: 30px 
+			left: 9px 
+			img
+				width: 180px
+				height: 105px
+		.nav-top-left, .nav-top-right
+			a
+				&:hover
+					text-decoration: underline
+				&.active
+					color: $grey-darkness 
+		.nav-top-left
+			@include absolute-pos(25px,null,null,270px)
+			ul
+				margin: 0
+				padding: 0 
+				li
+					display: inline-block
+					margin: 0 10px
+					&:first-child
+						margin-left: 0
+					&:last-child
+						margin-right: 0 
+					a
+						color: $grey
+						font-size: 15px 
+						text-decoration: none 
+		.nav-top-right
+			@include absolute-pos(25px,0,null,null)
+			ul
+				margin: 0
+				padding: 0 
+				li
+					display: inline-block
+					margin: 0 5px
+					&:first-child
+						margin-left: 0
+					&:last-child
+						margin-right: 0 
+					&.contact
+						margin-right: 20px
+						a
+							font-size: 15px
+					a
+						color: $grey
+						font-size: 20px 
+						text-decoration: none 
+		.nav-main-left
+			@include absolute-pos(70px,null,null,270px)
+			ul
+				margin: 0
+				padding: 0 
+				li
+					display: inline-block
+					margin: 0 15px
+					&:first-child
+						margin-left: 0
+					&:last-child
+						margin-right: 0 
+					a
+						color: $blue
+						font-size: 18px 
+						text-decoration: none 
+						&:hover,
+						&.active
+							color: $yellow-1
+						
+		.nav-main-right
+			@include absolute-pos(70px,0,null,null)
+			ul
+				margin: 0
+				padding: 0 
+				li
+					display: inline-block
+					margin: 00
+					color: $blue
+					font-size: 14.5px 
+					b
+						font-size: 16.5px 
+						font-family: $font-bold
+						i
+							font-style: normal 
+							font-family:  $font-light

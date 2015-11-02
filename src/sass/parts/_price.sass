@@ -1,0 +1,215 @@
+#price
+	#top
+		height: 320px
+		h2.sweet
+			padding-top: 200px
+			margin: 0
+
+	#price-wizard
+		aside
+			float: right
+			position: relative
+			z-index: 20  
+			width: 337px
+			background: $blue-dark
+			.price-list
+				padding: 30px
+				font-size: 14.5px
+				line-height: 20px
+				border-bottom: 2px solid $blue 
+				height: 350px 
+				ul
+					list-style: none 
+					padding: 0
+					li
+						border-bottom: 1px solid $blue-darkness
+						padding: 6px 0 
+						cursor: pointer
+						&:last-child
+							border-bottom: none 
+						span
+							font-size: 15px
+							font-family: $font-bold
+							margin-right: 10px  
+							color: $yellow
+							display: inline-block
+							float: left
+						p
+							margin: 0 0 0 70px 
+							b
+								font-weight: normal
+								text-transform: uppercase
+								font-size: 15px
+				a, i
+					color: $blue-light
+				h3
+					margin-top: 0 
+					text-transform: uppercase
+					font-size: 15px
+					letter-spacing: 1px  
+		
+		form#price-form
+			background: $yellow-1 
+			position: relative
+			width: 616px
+			height: 350px
+			padding: 30px
+			margin-bottom: 30px
+			h3
+				font-size: 23.5px
+			
+			.widget
+				ul
+					list-style: none 
+					margin: 0
+					padding: 0
+					li
+						width: 100%
+
+						label
+							display: inline-block
+							background: $white
+							@include border-radius(2em)
+							color: $grey-darkness
+							padding: 6px 20px 4px
+							font-size: 15px
+							font-family: $font-bold
+							margin-right: 20px
+							cursor: pointer
+							&.checked
+								background: $blue-darkness
+								color: $white 
+							input
+								display: none
+				.slider-controls
+					position: absolute
+					bottom: 0
+					left: 0
+					text-align: center
+					margin: 30px
+					span
+						font-size: 35px
+						a 
+							color: $yellow
+							&.disabled
+								color: $yellow-5
+								cursor: default
+							i
+								font-weight: bold
+					.slider-pager
+						display: inline-block
+						width: 70px
+						position: relative
+						top: -6px 
+						.bx-pager
+							display: inline
+
+
+			.item
+				h3
+					margin-bottom: 0
+				time
+					margin-bottom: 10px
+					display: block 
+					font-size: 18px
+				p, li
+					font-size: 14.5px 
+				p, ul
+					margin: 0
+					padding: 0
+					line-height: normal 
+				ul
+					padding-left: 16px
+				a
+					color: $white
+				footer
+					position: absolute
+					padding-bottom: 30px 
+					bottom: 0
+					width: 90%
+					&>div
+						display: inline-block
+						&.price
+							width: 150px
+							font-size: 18px
+						&.submit
+							width: 150px
+							button
+								background: $white
+								font-family: $font-bold
+								font-size: 14px
+								text-transform: uppercase   
+								@include border-radius(2em)
+								border: none
+								color: $grey-darkness
+								padding: 6px 20px 4px 
+								  
+						&.special
+							float: right
+							a
+								color: $white
+								font-size: 14.5px 
+								margin-left: 40px
+								vertical-align: sub
+								&:first-child
+									margin-left: 0
+
+				.full,.half,.one,.three,.five,.sel
+					display: none
+				&.full 
+					li.full
+						display: list-item
+					.full
+						display: inline
+				&.half
+					.half
+						display: inline
+				&.one
+					.one
+						display: inline
+				&.three
+					.three
+						display: inline
+				&.five
+					.five
+						display: inline
+				&.sel
+					.sel
+						display: inline
+
+	#parallax
+		// clouds
+		#parallax-bg2
+			padding-top: 40px
+			z-index: 1
+			left: 45%
+		// plane1
+		#parallax-bg3 
+			width: 361px
+			padding-top: 160px			
+			margin: 0
+			z-index: 2
+			left: 46%
+			
+		// plane2
+		#parallax-bg1
+			padding-top: 340px
+			left: 65%
+			margin: 0
+		// bird
+		#parallax-bg7
+			width: 31px
+			padding-top: 340px
+			margin: 0
+			left: 75% 
+	.panel-opened
+		#parallax
+			#parallax-bg2
+				padding-top: 485px
+			// plane1
+			#parallax-bg3 
+				padding-top: 605px			
+				
+			// plane2, bird
+			#parallax-bg1, #parallax-bg7
+				padding-top: 785px

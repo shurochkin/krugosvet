@@ -1,0 +1,176 @@
+
+.wrap
+	margin: 0 auto
+	width: $wrap-width 
+
+.hide
+	display: none
+
+h2.sweet
+	font-family: $font-black
+	font-size: 76px
+	line-height: 60px 
+	margin: 45px 0
+	text-shadow: 0 0 10px $blue
+	i
+		font-style: normal 
+		display: block
+		margin-left: 55px 
+		&:first-child
+			margin-left: 15px
+		&:last-child
+			margin-left: 30px
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+	margin-top: 0
+
+h2
+	@include vr-baseline(30px,32px)
+
+
+h3
+	font-family: $font-bold 
+
+h5
+	font-family: $font-light
+	font-size: 18px 
+	margin-bottom: 10px
+	//margin-left: 10px 
+
+aside>div>h3
+	margin: 0
+	 
+aside>div
+	p,
+	ul
+		margin-top: 10px
+	i.fa
+		margin-right: 10px
+
+// base font size
+$ms-base: 1rem
+$base-font-size: $ms-base
+$base-line-height: 1.5rem
+html
+	@include vr-baseline($ms-base, $base-line-height)
+	@include container
+
+
+body
+	//background: $blue url('../img/home-bg.jpg') no-repeat 52% 0
+	background-color: $blue
+	color: $white
+	font-family: $font-light
+	font-size: 102%
+	-webkit-font-smoothing: antialiased
+
+
+#wrapper
+	position: relative
+	width: $wrap-width
+	margin: 0 auto 
+
+
+#content
+	padding: 0
+	margin: 0 auto
+	margin-top: -40px 
+		
+#index
+	#footer
+		margin-top: -100px
+
+#content
+	&>.wrap
+		&>section
+			z-index: 5 
+			position: relative
+
+.panel-opened
+	#panel
+		@include absolute-pos(0,0,null,0)	
+	#page
+		@include absolute-pos(455px,0,null,0)
+	#parallax-bg1
+		padding-top: 475px 
+	#parallax-bg2
+		padding-top: 585px 
+
+
+.clearfix
+	clear: both
+
+
+.fancybox-close 
+	background: none
+	color: $yellow
+	font-size: 45px
+	width: 40px
+	height: 40px
+	top: -13px
+	right: -11px
+	
+.fancybox-overlay
+	background: rgba($overlay,.7) 
+	
+.form
+	h3
+		font-size: 24px 
+	input
+		background: $grey-light
+		border: none 
+		width: 345px
+		font-size: 18px 
+		padding: 10px
+		margin: 10px 0
+		&[type='number']
+			width: 50px 
+		&[type='time']
+			width: 80px 
+		&[type='submit']
+			@include submit-btn() 
+
+	label
+		display: block
+		font-size: 14.5px 
+		margin-top: 10px  
+		input
+			display: block
+
+	fieldset
+		border: none
+		padding: 0
+		margin-bottom: 20px
+		legend
+			font-family: $font-bold
+		&.radio
+			input[type='radio']
+				display: none
+			label
+				display: inline-block
+				cursor: pointer
+				position: relative
+				padding-left: 25px
+				margin-right: 25px
+				font-size: 24px
+				&:before 
+					content: ""
+					display: inline-block
+					width: 16px
+					height: 16px
+					margin-right: 10px
+					position: absolute
+					left: 0
+					bottom: 4px
+					background-color: $grey-light
+					//box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8)
+					border-radius: 50%
+			input[type=radio]:checked + label:before
+				content: "\2022"
+				color: $grey-dark
+				font-size: 23px
+				text-align: center
+				line-height: 18px
+
+

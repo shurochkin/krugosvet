@@ -1,0 +1,29 @@
+#features
+	position: relative
+	margin-top: 65px 
+	dl
+		counter-reset: my-badass-counter
+		padding-left: 320px 
+		dt, dd
+			padding-left: 55px
+		dt
+			position: relative
+			font-family: $font-light
+			@include vr-baseline(30px, 30px)
+			&:before 
+				content: counter(my-badass-counter)
+				counter-increment: my-badass-counter
+				color: $blue
+				position: absolute
+				left: 0
+				top: 0
+				font-family: $font-bold
+				@include vr-baseline(21px, 34px)
+				background: $yellow
+				width: 32px
+				height: 32px
+				text-align: center
+				@include border-radius(50%) 
+		dd 
+			margin: 15px 0 60px 0
+			@include vr-baseline(18px, 22px) 

@@ -1,0 +1,180 @@
+#teachers
+	padding-top: 375px 
+	.intro
+		@include vr-baseline(30px, 35px)
+	.photo
+		margin: 0
+		padding: 0
+		.item
+			border-right: 2px solid $blue
+			border-bottom: 2px solid $blue
+			display: inline-block
+			overflow: hidden
+			width: 337px
+			height: 337px
+			margin: 0
+			padding: 0
+			position: relative
+			float: left
+			cursor: pointer
+			&:nth-child(3n)
+				border-right: none
+			dl
+				margin: 0
+				@include absolute-pos(null,0,-120px,0)
+				background: rgba($yellow-1,.95) 
+				width: 297px
+				padding: 20px
+				@include transition(all .3s ease)
+				dt
+					font-family: $font-bold
+					@include vr-baseline(18px,20px)
+					margin-bottom: 10px
+				dd
+					font-size: 14.5px 
+					margin: 0 
+			&:hover
+				dl
+					@include absolute-pos(null,0,0,0)
+	aside
+		float: right
+		width: 33.333%
+		.welcome
+			padding: 30px 30px 25px 25px
+			font-size: 14.5px
+			line-height: 20px
+			background: $blue-light url(../svg/main/samoletik.svg) no-repeat 90% 80%
+			color: $blue-dark
+			h3
+				margin-top: 0 
+				text-transform: uppercase
+				font-size: 15px
+				letter-spacing: 1px  
+			a
+				color: $blue-dark
+
+
+#teachers-slider
+	display: none
+	width: 1015px
+	height: 677px 
+	position: absolute !important
+	.bx-viewport
+		background: $blue 
+	ul.slider
+		margin: 0
+		padding: 0
+		list-style: none
+		li
+			display: block
+			width: $wrap-width
+			height: 677px 
+			.item
+				width: $wrap-width
+				height: 677px 
+				.desc
+					width: 676px
+					height: 676px
+					background: $white
+					color: $grey-darkness  
+					float: right
+					article
+						padding: 30px
+						@include vr-baseline(14.5px, 18px)
+						h3
+							color: $yellow-1
+							text-transform: uppercase
+							margin-bottom: 10px 
+							font-size: 14px 
+						dl
+							margin: 10px 0 25px 100px
+							dt
+								position: relative
+								time
+									color: $blue
+									position: absolute
+									left: -100px  
+									font-family: $font-bold 
+									font-size: 14px 
+							dd
+								color: $grey-dark
+								margin: 0 
+								margin-bottom: 10px
+								&:last-child 
+									margin-bottom: 25px
+						ul, p
+							padding: 0
+							margin: 0
+						ul
+							padding-left: 20px
+							li
+								height: auto
+								width: auto
+								color: $grey-dark 
+								position: relative
+								&:before
+									content: '.'
+									color: $yellow-1
+									font-size: 40px 
+									line-height: 0
+									position: absolute
+									left: -20px 
+
+						h3,dl,ul,p
+							margin-left: 100px
+
+						
+						
+				.photo
+					width: 337px
+					height: 337px
+					border: 2px solid transparent
+					border-top: none
+					border-left: none 
+					img
+						max-width: 100% 
+				.title
+					width: 337px
+					height: 337px
+					background: $yellow-1 
+					article
+						padding: 30px
+						dl
+							margin: 0
+							padding: 0
+							dt
+								font-family: $font-bold
+								@include vr-baseline(24px,30px)
+								margin-bottom: 10px
+							dd
+								font-size: 18px 
+								margin: 0 
+	.slider-controls
+		width: 280px
+		text-align: left
+		margin: 25px
+		position: relative
+		top: -100px
+		left: 0
+		span
+			font-size: 45px
+			a 
+				color: $yellow
+				&.disabled
+					color: $yellow-5
+					cursor: default
+				i
+					font-weight: bold
+					padding: 0 2px
+		.slider-pager
+			display: inline-block
+			width: 30px
+			.bx-pager
+				display: none
+		.close
+			float: right
+			a 
+				color: $yellow
+				i
+					font-weight: bold
+					padding: 0 2px

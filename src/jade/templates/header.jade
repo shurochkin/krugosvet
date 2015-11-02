@@ -1,0 +1,34 @@
+header#header
+	.wrap
+		#logo
+			a(href="/")
+				img(src='svg/logo.svg')
+
+		nav.nav-top-left
+			ul
+				li
+					a(class={active: page === 'gallery'} href='/gallery.html') Фотогалерея
+				li
+					a(class={active: page === 'blog'} href='/blog.html') Блог «Кругосвета»
+				li
+					a(class={active: page === 'dopuslugi'} href='/dopuslugi.html') Дополнительные услуги
+
+		nav.nav-top-right
+			ul
+				li.contact
+					a#contact(href='#') Контакты
+				include ./social-list.jade
+		nav.nav-main-left
+			ul
+				li
+					a(class={active: page === 'about'} href='/#values') О нас
+				li
+					a(class={active: page === 'club'} href='/club.html') Детский клуб
+				li
+					a(class={active: page === 'programm'} href='/programm.html') Программа
+				li
+					a(class={active: page === 'price'} href='/price.html') Стоимость
+		nav.nav-main-right
+			ul
+				li
+					| +7 (812) <b>642-31-55</b>

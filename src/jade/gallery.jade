@@ -1,0 +1,76 @@
+- var page = 'gallery'
+doctype
+html#gallery
+	head
+		title Фотогалерея | Детский сад "Кругосвет" в Рыбацком
+		include ./templates/head.jade
+		script(src='lib/grid-gallery/modernizr.custom.js')
+		style
+			| @font-face {
+			|	font-family: 'fontawesome';
+			|	src:url('/fonts/fontawesome/fontawesome.eot?-e43dk9');
+			|	src:url('/fonts/fontawesome/fontawesome.eot?#iefix-e43dk9') format('embedded-opentype'),
+			|		url('/fonts/fontawesome/fontawesome.woff?-e43dk9') format('woff'),
+			|		url('/fonts/fontawesome/fontawesome.ttf?-e43dk9') format('truetype'),
+			|		url('/fonts/fontawesome/fontawesome.svg?-e43dk9#fontawesome') format('svg');
+			|	font-weight: normal;
+			|	font-style: normal;
+			| } 
+
+
+	body#home
+		include ./templates/contact.jade
+		
+		#page
+			include ./templates/header.jade
+
+			#content
+				.wrap
+					section#top
+						div.content
+							h2.sweet 
+								i Фотогалерея
+								i
+								i
+
+					section#gallery-content.grid-gallery
+						section.grid-wrap
+							ul.grid
+								li.grid-sizer
+								- var i = 1
+								while i <= 18
+									li
+										figure
+											img(src='img/gallery/#{i}.jpg')
+
+									- i++
+						section.slideshow
+							ul
+								- var i = 1
+								while i <= 18
+									li
+										figure
+											img(src="img/gallery/#{i}.jpg", alt="img#{i}")
+									- i++
+							nav
+								span.icon.nav-prev
+								span.icon.nav-next
+								span.icon.nav-close
+							.info-keys.icon Navigate with arrow keys
+
+
+
+
+
+
+			include ./templates/footer.jade
+
+		script(src="lib/grid-gallery/imagesloaded.pkgd.min.js")
+		script(src="lib/grid-gallery/masonry.pkgd.min.js")
+		script(src="lib/classie/classie.js")
+		script(src="lib/grid-gallery/cbpGridGallery.js")
+		script
+			| new CBPGridGallery( document.getElementById( 'gallery-content' ) );
+
+
+	include ./templates/scripts.jade

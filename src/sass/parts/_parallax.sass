@@ -1,0 +1,101 @@
+#parallax
+	&>div
+		@include transition(padding-top .5s ease)
+	&.touch
+		overflow: hidden
+		width: $wrap-width
+		background: #FFF   
+		&>div
+			position: absolute !important
+
+#parallax-bg1
+	z-index: 3
+	position: fixed
+	left: 50%
+	top: 0
+	width: 365px
+	margin-left: -165px
+	padding-top: 25px 
+
+#parallax-bg2
+	z-index: 2
+	position: fixed
+	left: 50%
+	top: 0
+	width: 1300px
+	margin-left: -700px
+	padding-top: 130px 
+	img
+		width: 1300px 
+// 2_clouds + 3_clouds
+#parallax-bg3
+	z-index: 1
+	position: fixed
+	left: 50%
+	top: 0
+	width: 1070px
+	margin-left: -535px
+	padding-top: 950px
+	img.cl3
+		float: right
+		margin-top: -100px
+		margin-right: 10px
+	img.cl4
+		padding-top: 530px
+		margin-left: -30px
+	img.cl5
+		padding-top: 440px
+		
+
+// 2_bird + zeppelin
+#parallax-bg4
+	z-index: 2
+	position: fixed
+	left: 50%
+	top: 0
+	width: 940px
+	margin-left: -450px
+	padding-top: 1100px 
+	img.bird
+		width: 55px
+		float: right
+	img.zepp
+		margin-top: 30px  
+	img.par
+		margin-top: 530px  
+		margin-right: -130px
+		float: right
+
+// 2_plane
+#parallax-bg5
+	z-index: 3
+	position: fixed
+	left: 50%
+	top: 0
+	width: 100px
+	margin-left: -510px
+	padding-top: 1500px 
+
+
+
+
+// 3_parachute
+#parallax-bg6
+	z-index: 1
+	position: fixed
+	left: 50%
+	top: 0
+	width: 1000px
+	margin-left: -500px
+	padding-top: 3300px 
+	
+#parallax-bg7
+	z-index: 1
+	position: fixed
+	left: 50%
+	top: 0
+	width: 384px
+	margin-left: 90px
+	padding-top: 1800px
+
+

@@ -1,0 +1,48 @@
+- var page = 'blog'
+doctype
+html#blog
+	head
+		title Блог | Детский сад "Кругосвет" в Рыбацком
+		include ./templates/head.jade
+
+
+	body#home
+		include ./templates/contact.jade
+		
+		#page
+			include ./templates/header.jade
+
+			#content
+				.wrap
+					section#top
+						div.content
+							h2.sweet 
+								i Блог
+								i Кругосвета
+								i
+
+					section#blog-content
+
+					.clearfix
+			include ./templates/footer.jade
+
+
+
+	include ./templates/scripts.jade
+	script(src="lib/grid-gallery/masonry.pkgd.min.js")
+	script(src='lib/jquery-rss/jquery.rss.min.js')
+	script.
+		$("#blog-content").rss("http://Krugosvet-spb.livejournal.com/data/rss",{
+			limit: 20,
+			layoutTemplate: '<div class="feed-container">{entries}<div class="clearfix"></div></div>',
+			entryTemplate: '<div class="item"><a href="#post-{index}">{teaserImage}<h3>{title}</h3><p>{shortBody}</p></a><div id="post-{index}" class="full-text"><h3>{title}</h3><p>{body}</p></div></div>'
+		}, function(){
+			$('.feed-container img').load(function(){
+				$('.feed-container').masonry({
+					itemSelector: '.item'
+			})
+			$('.feed-container .item a').fancybox({
+				minWidth: 930,
+				maxWidth: 930
+			})
+		})})

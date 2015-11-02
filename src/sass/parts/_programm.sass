@@ -1,0 +1,89 @@
+#programm
+	#content
+		background: transparent url(../svg/programm/clouds.svg) no-repeat 50% 0
+
+
+	#top
+		height: 590px
+		background: transparent url(../svg/programm/heli.svg) no-repeat 15% 75%
+		h2.sweet
+			padding-top: 130px
+			margin: 0
+		aside
+			float: right
+			position: relative
+			top: -10px
+			z-index: 20  
+			width: 33.333%
+			&>div
+				font-size: 14.5px
+				line-height: 20px
+				h3
+					margin-top: 0 
+					text-transform: uppercase
+					font-size: 15px
+					letter-spacing: 1px  
+				&.schedule
+					background: $blue-dark url(../svg/programm/teddy.svg) no-repeat 90% 95%
+					border-bottom: 2px solid $blue 
+					ul
+						list-style: none 
+						padding: 0
+						li
+							border-bottom: 1px solid $blue-darkness
+							padding: 5px 0 
+							&:last-child
+								border-bottom: none 
+							time
+								font-size: 15px
+								font-family: $font-bold
+								margin-right: 10px  
+								color: $yellow
+					a, i
+						color: $blue-light
+				.inner
+					padding: 30px 30px 25px 25px
+
+		
+	#features
+		p.intro
+			padding-left: 375px
+			font-size: 18px  
+
+	#values
+		top: 0
+		.row
+			&>div
+				&.b1 h3
+					background: $yellow-1 url(../svg/programm/programm-01.svg) no-repeat 80% 80%
+				&.b2 h3
+					background: $yellow-2 url(../svg/programm/programm-02.svg) no-repeat 80% 80%
+				&.b3 h3
+					background: $yellow-3 url(../svg/programm/programm-03.svg) no-repeat 80% 80%
+
+	#features
+		background: transparent url(../svg/programm/clouds_2.svg) no-repeat 0 10%
+		dl
+			background: transparent url(../svg/programm/zeppelin.svg) no-repeat 10% 50%
+
+
+#schedule
+	h3
+		font-size: 24px 
+	p
+		font-size: 18.5px 
+	dl
+		margin-left: 70px 
+		dt
+			font-size: 18.5px 
+			position: relative
+			margin-top: 10px
+			time
+				font-family: $font-bold
+				color: $yellow-1
+				position: absolute
+				left: -70px  
+		dd
+			@include vr-baseline(14.5px, 18px)
+			color: $grey-dark 
+			margin-left: 0

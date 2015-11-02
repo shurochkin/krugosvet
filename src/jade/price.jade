@@ -1,0 +1,234 @@
+- var page = 'price'
+doctype
+html#price
+	head
+		title Стоимость | Детский сад "Кругосвет" в Рыбацком
+		include ./templates/head.jade
+
+
+
+	body#home
+		include ./templates/contact.jade
+		
+		#page
+			include ./templates/header.jade
+
+			#content
+				.wrap
+					section#top
+						div.content
+							h2.sweet 
+								i Стоимость
+								i 
+								i 
+					
+					section#price-wizard
+
+						h5 Подобрать группу посещения
+						aside 
+							.price-list
+								h3 Cтоимость посещения
+								ul
+									li.show(data-param='full five')
+										span 25 800<br>руб/мес
+										p <b>Полный день</b><br>5 раз в неделю<br>с 8:00 до 19:00
+									li.show(data-param='half five')
+										span 13 200<br>руб/мес
+										p <b>Неполный день</b><br>5 раз в неделю<br>с 8:00 до 19:00 / с 15:00 до 19:00
+									li.show(data-param='full three')
+										span 15 600<br>руб/мес
+										p <b>Полный день</b><br>3 раза в неделю<br>с 8:00 до 19:00
+									li.show(data-param='full one')
+										span 2 000<br>руб
+										p.
+											<b>Полный день</b><br>
+											Разовое посещение
+								a(href="#") Подобрать
+
+						form#price-form
+							.widget
+								ul.slider
+									li.q1
+										h3 Сколько лет вашему ребенку?
+										label 1-2 года
+											input(type='radio' name='q1' value='1') 
+										label 3-5 лет
+											input(type='radio' name='q1' value='2')
+										label более 5 лет
+											input(type='radio' name='q1' value='3')
+
+
+									li.q2
+										h3 В Вашей семье оба родителя работают?
+										label только 1
+											input(type='radio' name='q2' value='1') 
+										label оба
+											input(type='radio' name='q2' value='2')
+
+									li.q3
+										h3 Как часто вы бы хотели чтобы ваш ребенок посещал детский сад?
+										label раз в неделю
+											input(type='radio' name='q3' value='1') 
+										label 2-3 раза в неделю
+											input(type='radio' name='q3' value='2')
+										label каждый день
+											input(type='radio' name='q3' value='3')
+								.slider-controls
+									span.slider-prev
+									.slider-pager
+									span.slider-next
+							
+							.item.hide
+								h3 
+									span.sel Вам подойдет<br> 
+									span.full Полный день
+									span.half Неполный день
+									, 
+									span.one Разовое посещение
+									span.three 3 раза
+									span.five 5 раз
+									span.three.five  в неделю
+								time
+									span.full с 8:00 до 19:00
+									span.half с 8:00 до 13:00 / с 15:00 до 19:00
+
+								p В стоимость входит:
+								ul
+									li
+										span.full 5-ти разовое питание, 
+										span.half 3-х разовое питание, 
+									li утренняя зарядка, 
+									li занятие с логопедом 1 р/нед, 
+									li занятие музыкой 2р/нед, 
+									li ритмопластика 2р/нед, 
+									li физкультминутки, 
+									li прогулка на свежем воздухе, 
+									li ежедневные занятия по программе 
+										a(href='/programm.html') ISSA 
+									li.full дневной сон
+								p.three.one Все дополнительные развивающие занятия проходят в соответствии с расписанием в зависимости от выбранного для посещения дня недели.
+								footer
+									.special
+										a.price-special(href='#') Специальное предложение
+										a.price-excursion(href='#') Экскурсия
+									.price
+										span.one 2 000 руб
+										span.three 15 600 руб/мес
+										span.five
+											span.full 25 800 
+											span.half 13 200 
+											| руб/мес
+									.submit
+										button.price-order Записаться
+
+
+
+
+			include ./templates/footer.jade
+
+		#parallax
+			#parallax-bg1.animated.fadeInDown.delay-0
+				img(src='svg/price/plane2.svg')
+			#parallax-bg3.animated.fadeInDown.delay-0
+				img(src='svg/price/plane1.svg')
+			#parallax-bg7.animated.fadeInDown.delay-0
+				img(src='svg/price/small_bird.svg')
+			#parallax-bg2.animated.fadeInDown.delay-0
+				img(src='svg/price/clouds.svg')
+	.hide
+		#price-special
+			form.form
+				h3 Укажите свой e-mail или телефон,<br>чтобы быть в курсе наших<br>специальных предложений
+
+				fieldset
+					label e-mail:
+						input(type='email' name='email' required)
+							
+					label телефон:
+						input(type='text' name='phone')
+							
+				input(type='submit' value='Отправить')
+
+
+		#price-excursion
+			form.form
+				h3 Для записи на экскурсию<br>в садик заполните поля ниже
+
+				fieldset
+					legend Родитель:
+					label Имя:
+						input(type='text' name='parent_firstname' required)
+							
+					label Фамилия:
+						input(type='text' name='parent_lastname')
+
+				fieldset
+					legend Ребенок:
+					label Имя:
+						input(type='text' name='kinder_firstname' required)
+							
+					label Фамилия:
+						input(type='text' name='kinder_lastname')
+
+					label Возраст:
+						input(type='number' name='age' min='0' max='6' step='.1' required)
+
+				fieldset
+					legend Время посещения
+					label
+						input(type='time' name='time' required)
+							
+				fieldset
+					legend Интересующая услуга
+					label
+						input(type='text' name='service')
+							
+				fieldset
+					legend Контактный телефон
+					label
+						input(type='text' name='phone' required)
+
+				fieldset.radio
+					legend Хотите ли Вы пообщаться с директором
+					input(type='radio' name='director' value='да' id='diryes' checked='checked')
+					label(for='diryes') Да
+					input(type='radio' name='director' value='нет' id='dirno' )
+					label(for='dirno') Нет
+
+
+							
+				input(type='submit' value='Отправить')
+
+		#price-order
+			form.form
+				h3 Для записи на экскурсию<br>в садик заполните поля ниже
+
+				fieldset
+					legend Родитель:
+					label Имя:
+						input(type='text' name='parent_firstname' required)
+							
+					label Фамилия:
+						input(type='text' name='parent_lastname')
+
+				fieldset
+					legend Ребенок:
+					label Имя:
+						input(type='text' name='kinder_firstname' required)
+							
+					label Фамилия:
+						input(type='text' name='kinder_lastname')
+
+					label Возраст:
+						input(type='number' name='age' min='0' max='6' step='.1' required)
+
+				fieldset
+					legend Контактный телефон
+					label 
+						input(type='text' name='phone' required) 
+
+				input(type='hidden' name='tarif' value='')					
+				input(type='submit' value='Отправить') 
+
+			
+	include ./templates/scripts.jade

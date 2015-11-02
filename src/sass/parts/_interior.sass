@@ -1,0 +1,59 @@
+#interior
+	padding-top: 275px 
+	//padding-bottom: 300px
+	.intro
+		width: 676px
+		@include vr-baseline(18px, 24px)
+	
+	.row
+		margin-top: 80px 	
+		aside
+			float: right
+			width: 337px
+			.top
+				background: $yellow-1 
+				border-bottom: 2px solid $blue
+			.bottom
+				background: $yellow-3
+			div
+				h3, p
+					padding: 24px
+					margin: 0
+					
+				h3
+					padding-bottom: 0
+					font-family: $font-bold
+					font-size: 23px  
+				p
+					padding-top: 0
+					padding-bottom: 68px
+					@include vr-baseline(16.5px, 20px)
+
+	.slider-wrapper
+		width: 675px
+		border-right: 2px solid $blue
+		ul.slider
+			padding: 0
+			margin: 0
+			li
+				height: 444px
+				overflow: hidden
+		img 
+			width: 100%
+	.slider-controls
+		width: 676px
+		text-align: center
+		margin: 25px 0
+		span
+			font-size: 35px
+			a 
+				color: $yellow
+				i
+					font-weight: bold
+		.slider-pager
+			display: inline-block
+			width: 70px
+			position: relative
+			top: -6px 
+			.bx-pager
+				display: inline
